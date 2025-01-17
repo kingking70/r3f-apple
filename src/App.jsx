@@ -1,7 +1,7 @@
 import Apple from './Apple'
 import './index.css'
 import { Canvas } from '@react-three/fiber'
-import { Environment } from '@react-three/drei'
+import { Environment, Text } from '@react-three/drei'
 import { Suspense } from 'react'
 import { EffectComposer, DepthOfField } from '@react-three/postprocessing'
 
@@ -19,6 +19,17 @@ export default function App({ count=50, depth=80 }) {
       <EffectComposer>
           <DepthOfField target={[0,0,depth/2]} focalLength={1} bokehScale={10} height={700}/>
       </EffectComposer>
+      <Text
+      color="#000000"
+      maxWidth={ 0.25 }
+      lineHeight={ 0.75 }
+      textAlign="right"
+      anchorX="center"
+      anchorY="middle"
+    >
+      APPLES
+        <meshBasicMaterial toneMapped={false} />
+      </Text>
     </Canvas>
   )
 }
