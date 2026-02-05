@@ -7,3 +7,57 @@ body,
   height: 100%;
   overflow: hidden;
 }
+
+.music-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 8px 14px;
+}
+
+.music-btn {
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.music-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.music-time {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: monospace;
+}
+
+.music-progress-bar {
+  width: 100px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.music-progress-fill {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}

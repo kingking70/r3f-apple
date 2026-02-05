@@ -22,8 +22,8 @@ export default function Apple({ z }) {
     useFrame((state, delta) => {
         fruitRef.current.rotation.set((data.rX += 0.001), (data.rY += 0.005), (data.rZ += 0.005))
         fruitRef.current.position.set(data.x * width, (data.y -= 0.02), z)
-        if (data.y > height) {
-            data.y = - height
+        if (data.y < -height) {
+            data.y = height
         }
     })
 
